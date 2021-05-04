@@ -1,6 +1,5 @@
 const staticCache = ("static-cache-v1")
 const assets = [
-    "/",
     "/js/app.js",
     "/css/app.css",
     "/img/logo.png",

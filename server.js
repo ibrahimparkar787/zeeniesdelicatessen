@@ -9,11 +9,11 @@ const PORT = process.env.PORT || 3500
 const mongoose = require("mongoose")
 const session = require("express-session")
 const flash = require("express-flash")
-const MongoDbStore = require("connect-mongo")(session)
+const MongoDbStore = require("connect-mongo")
 const passport = require("passport")
 const emitter = require("events")
 //Database Connection
-const url = "mongodb://localhost/zeeniesdelicatessen"
+const url = process.env.MONGO_URL
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: true});
 const conn = mongoose.connection;
 conn.on("error", console.error.bind(console, "connection error:"));
@@ -28,9 +28,8 @@ app.use(session({
     secret : process.env.C_S,
     resave : false,
     saveUninitialized : false,
-    store : new MongoDbStore({
-        mongooseConnection : conn,
-        collection : "sessions"
+    store : MongoDbStore.create({
+        mongoUrl : url
     }),
 
     cookie : { maxAge : 1000 * 60 * 60 * 24}
