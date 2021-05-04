@@ -1,0 +1,335 @@
+@import './variables';
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
+
+body {
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: $dark;
+    background: $secondary;
+}
+
+//hamburger
+
+.hamburger {
+    display: none;
+}
+
+.mobile .nav-img {
+    width: 100%;
+}
+
+.hamburger, .nav-img {
+    z-index: 9999;
+}
+
+.mobile .hamburger {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    cursor: pointer;
+
+}
+
+.mobile .hamburger span {
+    background: $primary;
+    width: 20px;
+    height: 2px;
+    margin-bottom: 8px;
+}
+
+.mobile ul.nav-list {
+    background: $secondary;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
+.mobile li {
+    padding-top: 10px;
+}
+
+.mobile ul.nav-list.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile .hamburger span {
+    padding-right: 30px;
+    transform-origin: left;
+    transition: all .3s ease-in-out;
+}
+
+//////////////////////////////
+
+nav li:last-child a {
+    background: $primary;
+    &:hover {
+        background: $primary-hover;
+    }
+}
+
+nav li a {
+    transition: $smooth;
+    width: 80px;
+    height: 50px;
+    &:hover {
+        color: $primary;
+    }
+}
+.nav-img{
+    width: 50%;
+}
+
+section.hero {
+    background: $secondary;
+}
+
+.size {
+    background: $secondary;
+}
+
+.add-to-cart {
+    border: 2px solid $primary;
+    color: $primary;
+    transition: $smooth;
+    &:hover {
+        background: $primary;
+        border-color: $pure;
+        color: $pure;
+    }
+    &:focus{
+        outline:none;
+    }
+}
+
+.remove-from-cart {
+    border: 2px solid $primary;
+    color: $primary;
+    transition: $smooth;
+    &:hover {
+        background: $primary;
+        border-color: $pure;
+        color: $pure;
+    }
+    &:focus{
+        outline:none;
+    }
+}
+
+.btn-primary {
+    background: $primary;
+    transition: $smooth;
+    &:hover {
+        background: $primary-hover;
+        
+    }
+}
+
+section.cart {
+    background: $secondary;
+
+    .amount {
+        color: $primary;
+    }
+}
+
+section.login {
+    background: $secondary;
+    min-height: calc(100vh - 86px);
+    a{
+        color: $primary;
+        &:hover{
+            color: $primary-hover;
+        }
+    }
+}
+
+.noty_theme_mint {
+    border-radius: 50px!important;
+    padding-left: 8px!important;
+
+}
+
+a.link {
+    color: $primary;
+}
+
+section.status {
+    background: $secondary;
+    min-height: calc(100vh - 86px);
+}
+
+.status-box {
+    padding: 60px 0 0;
+}
+
+.status-box ul {
+    margin-left: 84px;
+}
+
+.status-box ul li span {
+    position: relative;
+    padding-left: 20px;
+}
+
+.status-box ul li span:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    background: $dark;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translateY(-5px);
+    box-shadow: 0 0 1px 10px $secondary;
+}
+
+.status-box ul li span:before {
+    font-family: "Line Awesome Free";
+    font-size: 46px;
+    font-weight: 600;
+    position: absolute;
+    left: -90px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: inherit;
+
+}
+
+.status-box ul li:nth-child(1) span:before {
+    content: "\f46c";
+}
+
+.status-box ul li:nth-child(2) span:before {
+    content: "\f560";
+}
+
+.status-box ul li:nth-child(3) span:before {
+    content: "\f1fd";
+}
+
+.status-box ul li:nth-child(4) span:before {
+    content: "\f0d1";
+}
+
+.status-box ul li:nth-child(5) span:before {
+    content: "\f582";
+}
+
+.status-box ul li {
+    position: relative;
+}
+
+.status-box ul li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 2px;
+    height: 80%;
+    background: $dark;
+    margin-top: 10px;
+}
+
+.status-box ul li:nth-child(5) span:after {
+    box-shadow: 0 20px 1px 20px $secondary;
+}
+
+.status-box ul li.step-completed:before {
+    background: $gray;
+}
+
+.status-box ul li.step-completed span:after {
+    background: $gray;
+}
+
+.status-box ul li.step-completed span {
+    color: $gray;
+}
+
+
+
+.status-box ul li.current span {
+    color: $primary;
+}
+
+.status-box ul li.current span:after {
+    background: $primary;
+}
+
+.status-box ul li small {
+    float: right;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+@media(max-width:1060px) {
+    .container {
+        max-width: 90%;
+    }
+    table {
+       display: block;
+       overflow-x: auto;
+       white-space: nowrap;
+    }
+}
+
+@media(max-width: 768px) {
+    .status-box ul li span:before {
+        font-size: 34px;
+    }
+}
+
+.StripeElement {
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: auto;
+    height: 40px;
+    padding: 10px 12px;
+
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
+
+  .StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+  }
+
+  .StripeElement--invalid {
+    border-color: #fa755a;
+  }
+
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }
+
+  .orders {
+      background: $secondary;
+  }
+
+  .order-table {
+    background: $secondary;
+  }
+
+  .footer {
+    
+    margin-top: 30%;
+    background-color: $primary-hover;
+    color: white;
+    text-align: center;
+ }
