@@ -1,4 +1,4 @@
-const staticCache = ("static-cache-v1")
+const staticCache = ("static-cache-v2")
 const assets = [
     "/img/logo.png",
     "/img/cart.png",
