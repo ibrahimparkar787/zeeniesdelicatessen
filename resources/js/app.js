@@ -8,6 +8,19 @@ import { initStripe } from './stripe'
 let addToCart = document.querySelectorAll(".add-to-cart")
 let cartCounter = document.querySelector("#cartCounter")
 let removeCart = document.querySelectorAll(".remove-from-cart")
+const cards = document.querySelectorAll(".card__inner")
+
+/////////////////
+
+
+cards.forEach((card)=>{
+    console.log(card);
+    card.addEventListener("click", function () {
+        card.classList.toggle('is-flipped');
+      }); 
+})
+
+//////////////////////
 
 function updateCart(cake) {
     axios.post("/update-cart", cake).then(res =>{
@@ -27,6 +40,9 @@ function updateCart(cake) {
         }).show();
     })
 }
+
+
+
 
 addToCart.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -158,3 +174,5 @@ hamburger.addEventListener('click', function() {
     
 
 })
+
+ 

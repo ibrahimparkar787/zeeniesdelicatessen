@@ -2985,6 +2985,14 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 var addToCart = document.querySelectorAll(".add-to-cart");
 var cartCounter = document.querySelector("#cartCounter");
 var removeCart = document.querySelectorAll(".remove-from-cart");
+var cards = document.querySelectorAll(".card__inner"); /////////////////
+
+cards.forEach(function (card) {
+  console.log(card);
+  card.addEventListener("click", function () {
+    card.classList.toggle('is-flipped');
+  });
+}); //////////////////////
 
 function updateCart(cake) {
   axios.post("/update-cart", cake).then(function (res) {

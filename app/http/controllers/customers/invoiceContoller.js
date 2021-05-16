@@ -16,17 +16,16 @@ function createInvoice(invoice, path, callback) {
 
 function generateHeader(doc) {
   doc
-    .image("public/img/logo.png", 10, 15, { scale: 0.15,
+    .image("public/img/invoice.png", 10, 15, { scale: 0.10,
       align: 'center',
       valign: 'center'})
     .stroke("red", "#900")
     .fillColor("#444444")
     .fontSize(20)
-    //.text("BuyIT", 110, 57)
     .fontSize(10)
     .text("Zeenie's Délicatessen", 200, 50, { align: "right" })
-    .text("207, GM Road, LMT marg, Ghatkopar West,", 200, 65, { align: "right" })
-    .text("Mumbai, Maharashtra 400086", 200, 80, { align: "right" })
+    .text("04, Emkay Garden, Taluja MIDC, Parel,", 200, 65, { align: "right" })
+    .text("Raigad, Maharashtra 410 208", 200, 80, { align: "right" })
     .text("Phone: 9702940769 / 22208467 ",200,95,{ align:"right"})
     .moveDown();
 }
@@ -49,12 +48,6 @@ function generateCustomerInformation(doc, invoice) {
     .font("Helvetica")
     .text("Date:", 50, customerInformationTop + 15)
     .text(formatDate(invoice.createdAt), 150, customerInformationTop + 15)
-    //.text("Balance Due:", 50, customerInformationTop + 30)
-    //.text(
-      //formatCurrency(invoice.subtotal - invoice.paid),
-     // 150,
-     // customerInformationTop + 30
-    //)
 
     .font("Helvetica-Bold")
     .text(invoice.name, 400, customerInformationTop)
