@@ -287,6 +287,10 @@ body {
   font-size: xx-large;
 }
 
+.order-page {
+  min-height: calc(100vh - 86px);
+}
+
 .card {
   margin: 100px auto 0;
   width: 300px;
@@ -439,16 +443,6 @@ body {
   border-radius: 0px 0px 50% 0px;
 }
 
-/*   .pp {
-    display: block;
-    width: 128px;
-    height: 128px;
-    margin: 0 auto 30px;
-    border-radius: 50%;
-    background-color: #FFF;
-    border: 5px solid #FFF;
-    object-fit: cover;
-  } */
 .card__header h2 {
   color: #FFF;
   font-size: 32px;
@@ -485,6 +479,7 @@ body {
 
 .hamburger {
   display: none;
+  margin-right: 15px;
 }
 
 .mobile .nav-img {
@@ -796,6 +791,7 @@ section.status {
 .er-pg {
   text-align: center;
   font-size: 200%;
+  min-height: calc(100vh - 86px);
 }
 
 .footer {
@@ -803,6 +799,7 @@ section.status {
   background-color: #43281c;
   color: white;
   text-align: center;
+  width: 100%;
 }
 
 .foot a {
