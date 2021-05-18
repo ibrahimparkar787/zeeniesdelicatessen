@@ -17,6 +17,13 @@ body {
     min-height: calc(100vh - 86px);
 }
 
+
+.hero {
+    text-align: center;
+    font-size: 2vw;
+    font-family:  'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 //card
 
 .card {
@@ -86,6 +93,7 @@ body {
     width: 100%;
     border-radius: 16px;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden;
     margin-top: 350px;
@@ -577,3 +585,17 @@ section.status {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
  }
+
+
+
+/////////////////////about us
+
+.abtus p {
+    text-align: center;
+    font-size: 2vw;
+}
+
+.abtus article {
+    text-align: center;
+    font-size: 1.5vw;
+}

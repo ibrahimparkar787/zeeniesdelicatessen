@@ -291,6 +291,12 @@ body {
   min-height: calc(100vh - 86px);
 }
 
+.hero {
+  text-align: center;
+  font-size: 2vw;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 .card {
   margin: 100px auto 0;
   width: 300px;
@@ -812,4 +818,14 @@ section.status {
   color: #fff;
   text-align: center;
   font-family: "Montserrat", sans-serif;
+}
+
+.abtus p {
+  text-align: center;
+  font-size: 2vw;
+}
+
+.abtus article {
+  text-align: center;
+  font-size: 1.5vw;
 }
